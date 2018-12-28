@@ -20,10 +20,13 @@ services:
       - dhl
 
     volumes:
-      - ./database:/var/lib/mysql
+      - database:/var/lib/mysql
 
     env_file:
       - ./mysql.env
 
 networks:
   dhl:
+
+volumes:
+  database:
