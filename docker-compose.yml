@@ -1,0 +1,29 @@
+version: '3'
+
+services:
+  headless-lightning:
+    build: .
+
+    volumes:
+      - ./:/var/www/html
+
+    ports:
+      - "80:80"
+
+    networks:
+      - dhl
+
+  mariadb:
+    image: mariadb:10.3.11
+
+    networks:
+      - dhl
+
+    volumes:
+      - ./database:/var/lib/mysql
+
+    env_file:
+      - ./mysql.env
+
+networks:
+  dhl:
