@@ -6,6 +6,8 @@ RUN php -r "if (hash_file('sha384', 'composer-setup.php') === '93b54496392c06277
 RUN php composer-setup.php --install-dir=/bin --filename=composer
 RUN php -r "unlink('composer-setup.php');"
 
+RUN composer global require hirak/prestissimo
+
 # clean web root
 RUN rm -rf /var/www/html
 
@@ -14,3 +16,5 @@ COPY ./000-default.conf /etc/apache2/sites-available
 # install headless-lightning
 RUN apt update && apt install -yq git
 RUN composer create-project acquia/lightning-project:dev-headless --no-interaction --stability dev .
+
+RUN composer require drush/drush
