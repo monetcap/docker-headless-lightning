@@ -25,11 +25,11 @@ RUN composer create-project acquia/lightning-project:dev-headless --no-interacti
 
 RUN composer require drush/drush
 
+RUN mv README.md HEADLESS-LIGHTNING.md
+
 COPY ./000-default.conf /etc/apache2/sites-available
 
 COPY docker-entrypoint.sh /bin
 
-RUN mv README.md HEADLESS-LIGHTNING.md
-
 RUN chmod +x /bin/docker-entrypoint.sh
-ENTRYPOINT [ './docker-entrypoint.sh' ]
+ENTRYPOINT [ 'docker-entrypoint.sh' ]

@@ -1,6 +1,7 @@
 #!/bin/bash
-echo "fixing /var/www/html permissions..."
-chown -R www:data:www-data /var/www/html
 
-echo "starting apache server for headless-lighning"
+set -e
+
+chown -R www-data:www-data /var/www/html
+
 apache2-foreground
