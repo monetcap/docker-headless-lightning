@@ -2,6 +2,7 @@ version: '3'
 
 services:
   headless-lightning:
+    restart: always
     build: .
 
     volumes:
@@ -9,21 +10,20 @@ services:
 
     ports:
       - "80:80"
-
     networks:
       - dhl
 
   mariadb:
+    restart: always
     image: mariadb:10.3.11
-
-    networks:
-      - dhl
 
     volumes:
       - database:/var/lib/mysql
-
     env_file:
       - ./mysql.env
+
+    networks:
+      - dhl
 
 networks:
   dhl:

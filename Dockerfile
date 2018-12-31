@@ -1,7 +1,14 @@
 FROM drupal:8.6.4-apache
 
+LABEL maintainer="kaden@vermilion.tech"
+LABEL version="pre-alpha"
+LABEL description="a headless-lightning docker orchestration"
+
 # install headless-lightning
-RUN apt update && apt install -yq git mysql-client
+RUN apt-get update && apt-get install --no-install-recommends -yq \
+ git \
+ mysql-client \
+ && rm -rf /var/lib/apt/lists/*
 
 # install composer
 RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
@@ -19,3 +26,9 @@ RUN composer create-project acquia/lightning-project:dev-headless --no-interacti
 RUN composer require drush/drush
 
 COPY ./000-default.conf /etc/apache2/sites-available
+
+COPY docker-entrypoint.sh /bin
+
+RUN mv README.md HEADLESS-LIGHTNING.md
+
+RUN chmod +x /bin/docker-entrypoint.sh

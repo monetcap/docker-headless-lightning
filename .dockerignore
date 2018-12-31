@@ -1,14 +1,19 @@
-docker-compose.yml
-README.md
-init.sh
-
-docroot
-drush
-vendor
-
+# headless-lightning webroot files
 behat.yml
 composer.json
 composer.lock
 
 .gitignore
 .travis.yml
+
+docroot
+drush
+vendor
+
+# environment files
+mysql.env
+
+# docker-compose / interfacing related files
+scripts
+docker-compose.yml
+init.sh
