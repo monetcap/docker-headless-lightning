@@ -32,3 +32,4 @@ COPY docker-entrypoint.sh /bin
 RUN mv README.md HEADLESS-LIGHTNING.md
 
 RUN chmod +x /bin/docker-entrypoint.sh
+ENTRYPOINT [ './docker-entrypoint.sh' ]
