@@ -29,6 +29,9 @@ RUN mv README.md HEADLESS-LIGHTNING.md
 
 COPY ./000-default.conf /etc/apache2/sites-available
 
+# default settings
+RUN echo '$config_directories[CONFIG_SYNC_DIRECTORY] = "../config";' >> docroot/sites/default/default.settings.php
+
 COPY docker-entrypoint.sh /bin
 RUN chmod +x /bin/docker-entrypoint.sh
 ENTRYPOINT [ "docker-entrypoint.sh" ]
