@@ -6,7 +6,7 @@ services:
     build: .
 
     volumes:
-      - ./:/var/www/html
+      - ./webroot:/var/www/html
 
     ports:
       - "80:80"
