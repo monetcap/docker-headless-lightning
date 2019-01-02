@@ -36,9 +36,6 @@ RUN chmod +x -R /opt/scripts
 # default settings
 RUN echo '$config_directories[CONFIG_SYNC_DIRECTORY] = "../config";' >> docroot/sites/default/default.settings.php
 
-# runtime install settings
-COPY install.settings.php /tmp
-
 COPY docker-entrypoint.sh /bin
 RUN chmod +x /bin/docker-entrypoint.sh
 ENTRYPOINT [ "docker-entrypoint.sh" ]

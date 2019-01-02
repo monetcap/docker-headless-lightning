@@ -35,6 +35,7 @@ if [ "$1" == "--startd" ]; then
 
      sudo chmod 777 webroot/docroot/sites/default/settings.php
      cat install.settings.php >> webroot/docroot/sites/default/settings.php
+     cat database.settings.php >> webroot/docroot/sites/default/settings.php
      sudo chmod 444 webroot/docroot/sites/default/settings.php
 
      docker-compose exec headless-lightning chown -R www-data:www-data /var/www/html
