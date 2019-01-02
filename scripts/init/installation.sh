@@ -2,7 +2,7 @@
 docker-compose down
 
 echo "removing previously existing webroot and database directory"
-rm -rf ./webroot ./database && mkdir ./webroot
+sudo rm -rf ./webroot ./database && mkdir ./webroot
 
 echo "copying files over..."
 docker run --rm dhl-experimental tar -cC /var/www/html . | tar -xC ./webroot
