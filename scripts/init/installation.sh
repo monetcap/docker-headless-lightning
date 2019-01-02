@@ -1,4 +1,6 @@
 #!/bin/bash
+set -e
+
 docker-compose down
 
 echo "removing previously existing webroot and database directory"
@@ -31,9 +33,9 @@ if [ "$1" == "--startd" ]; then
      --site-name="$SITE_NAME" \
      --yes
 
-     docker-compose exec headless-lightning chmod 777 /var/www/html/docroot/sites/default/settings.php
-     docker-compose exec headless-lightning cat /tmp/install.settings.php >> /var/www/html/docroot/sites/default/settings.php
-     docker-compose exec headless-lightning chmod 444 /var/www/html/docroot/sites/default/settings.php
+     sudo chmod 777 webroot/docroot/sites/default/settings.php
+     cat install.settings.php >> webroot/docroot/sites/default/settings.php
+     sudo chmod 444 webroot/docroot/sites/default/settings.php
 
      docker-compose exec headless-lightning chown -R www-data:www-data /var/www/html
   fi
