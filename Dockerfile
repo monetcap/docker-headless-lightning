@@ -36,6 +36,9 @@ RUN chmod +x -R /opt/scripts
 # default settings
 RUN echo '$config_directories[CONFIG_SYNC_DIRECTORY] = "../config";' >> docroot/sites/default/default.settings.php
 
+# copy env
+COPY mysql.env /tmp
+
 COPY docker-entrypoint.sh /bin
 RUN chmod +x /bin/docker-entrypoint.sh
 ENTRYPOINT [ "docker-entrypoint.sh" ]

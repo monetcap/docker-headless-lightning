@@ -1,3 +1,9 @@
+if (file_exists('/tmp/mysql.env')) {
+    // Load environment
+    $dotenv = new \Dotenv\Dotenv('/tmp', 'mysql.env');
+    $dotenv->load();
+}
+
 $databases['default']['default'] = array (
     'database' =>  getenv('MYSQL_DATABASE'),
     'username' => getenv('MYSQL_USER'),
