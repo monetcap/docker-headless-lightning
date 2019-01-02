@@ -31,7 +31,7 @@ COPY ./000-default.conf /etc/apache2/sites-available
 # copy runtime scripts
 RUN mkdir -p /opt/scripts
 COPY ./scripts/container/wait-until-mariadb-init.sh /opt/scripts
-RUN chmod +x /opt/scripts
+RUN chmod +x -R /opt/scripts
 
 # default settings
 COPY default.settings.php /tmp
