@@ -14,9 +14,6 @@ vendor
 webroot
 database
 
-# environment files
-mysql.env
-
 # docker-compose / interfacing related files
 scripts/export
 scripts/import
