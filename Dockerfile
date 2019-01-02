@@ -29,6 +29,7 @@ RUN composer require drush/drush
 COPY ./000-default.conf /etc/apache2/sites-available
 
 # copy runtime scripts
+RUN mkdir -p /opt/scripts
 COPY ./scripts/container /opt/scripts
 
 # default settings
