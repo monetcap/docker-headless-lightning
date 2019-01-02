@@ -2,6 +2,7 @@
 docker-compose down
 
 echo "removing previously existing webroot and database directory"
+sudo chown `whoami`:`whoami` -R ./
 sudo rm -rf ./webroot ./database && mkdir ./webroot
 
 echo "copying files over..."
