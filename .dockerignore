@@ -18,6 +18,9 @@ database
 mysql.env
 
 # docker-compose / interfacing related files
-scripts
+scripts/export
+scripts/import
+scripts/init
+
 docker-compose.yml
 init.sh
