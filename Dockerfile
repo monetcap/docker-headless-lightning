@@ -38,9 +38,6 @@ RUN chmod +x -R /opt/scripts
 COPY default.settings.php /tmp
 RUN cat /tmp/default.settings.php >> docroot/sites/default/default.settings.php
 
-# copy env
-COPY mysql.env /tmp
-
 COPY docker-entrypoint.sh /bin
 RUN chmod +x /bin/docker-entrypoint.sh
 ENTRYPOINT [ "docker-entrypoint.sh" ]

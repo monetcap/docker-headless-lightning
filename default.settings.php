@@ -1,6 +1,6 @@
-if (file_exists('/tmp/mysql.env')) {
+if (file_exists('/environment/mysql.env')) {
     // Load environment
-    $dotenv = new \Dotenv\Dotenv('/tmp', 'mysql.env');
+    $dotenv = new \Dotenv\Dotenv('/environment', 'mysql.env');
     $dotenv->load();
 }
 

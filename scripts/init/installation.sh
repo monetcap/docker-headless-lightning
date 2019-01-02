@@ -34,7 +34,6 @@ if [ "$1" == "--startd" ]; then
      --yes
 
      sudo chmod 777 webroot/docroot/sites/default/settings.php
-     cat install.settings.php >> webroot/docroot/sites/default/settings.php
      sudo sed -i -e "s/^\s*'database' => .*,/    'database' => getenv('MYSQL_DATABASE'),/g" webroot/docroot/sites/default/settings.php
      sudo sed -i -e "s/^\s*'username' => .*,/    'username' => getenv('MYSQL_USER'),/g" webroot/docroot/sites/default/settings.php
      sudo sed -i -e "s/^\s*'password' => .*,/    'password' => getenv('MYSQL_PASSWORD'),/g" webroot/docroot/sites/default/settings.php
