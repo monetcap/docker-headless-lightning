@@ -1,2 +1,2 @@
 #!/bin/bash
-docker-compose exec headess-lightning ./vendor/bin/drush cex --yes
+docker-compose exec headless-lightning ./vendor/bin/drush cex --yes
