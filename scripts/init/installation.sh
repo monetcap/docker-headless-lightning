@@ -35,7 +35,11 @@ if [ "$1" == "--startd" ]; then
 
      sudo chmod 777 webroot/docroot/sites/default/settings.php
      cat install.settings.php >> webroot/docroot/sites/default/settings.php
-     cat database.settings.php >> webroot/docroot/sites/default/settings.php
+     sudo sed -i -e "s/^\s*'database' => .*,/    'database' => getenv('MYSQL_DATABASE'),/g" settings.php
+     sudo sed -i -e "s/^\s*'username' => .*,/    'username' => getenv('MYSQL_USER'),/g" settings.php
+     sudo sed -i -e "s/^\s*'password' => .*,/    'password' => getenv('MYSQL_PASSWORD'),/g" settings.php
+     sudo sed -i -e "s/^\s*'host' => .*,/    'host' => getenv('MYSQL_HOST'),/g" settings.php
+     sudo sed -i -e "s/^\s*'port' => .*,/    'port' => getenv('MYSQL_PORT'),/g" settings.php
      sudo chmod 444 webroot/docroot/sites/default/settings.php
 
      docker-compose exec headless-lightning chown -R www-data:www-data /var/www/html

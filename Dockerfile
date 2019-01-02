@@ -35,7 +35,8 @@ COPY ./scripts/container/wait-until-mariadb-init.sh /opt/scripts
 RUN chmod +x -R /opt/scripts
 
 # default settings
-RUN echo '$config_directories[CONFIG_SYNC_DIRECTORY] = "../config";' >> docroot/sites/default/default.settings.php
+COPY default.settings.php /tmp
+RUN cat /tmp/default.settings.php >> docroot/sites/default/default.settings.php
 
 # copy env
 COPY mysql.env /tmp
