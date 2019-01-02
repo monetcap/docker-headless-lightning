@@ -12,3 +12,8 @@ if [ "$1" == "--start" ]; then
   echo "Starting docker-headless-lightning development orchestration"
   docker-compose up --build -d
 fi
+
+if [ "$1" == "--startd" ]; then
+  echo "Starting docker-headless-lightning development orchestration"
+  docker-compose up --build -d
+fi
