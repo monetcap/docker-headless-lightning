@@ -21,7 +21,7 @@ if [ "$1" == "--startd" ]; then
     source ./mysql.env
     source ./drupal.env
 
-    drush site:install \
+    docker-compose exec headless-lightning ./vendor/bin/drush site:install \
      --db-url="mysql://$MYSQL_USER:$MYSQL_PASSWORD@mariadb/$MYSQL_DATABASE" \
      --account-mail="$ACCOUNT_MAIL" \
      --site-mail="$SITE_MAIL" \
