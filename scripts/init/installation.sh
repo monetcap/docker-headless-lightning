@@ -21,6 +21,8 @@ if [ "$1" == "--startd" ]; then
     source ./mysql.env
     source ./drupal.env
 
+    docker-compose exec headless-lightning /opt/scripts/wait-until-mariadb-init.sh
+
     docker-compose exec headless-lightning ./vendor/bin/drush site:install \
      --db-url="mysql://$MYSQL_USER:$MYSQL_PASSWORD@mariadb/$MYSQL_DATABASE" \
      --account-mail="$ACCOUNT_MAIL" \

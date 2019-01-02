@@ -8,6 +8,7 @@ LABEL description="a headless-lightning docker orchestration"
 RUN apt-get update && apt-get install --no-install-recommends -yq \
  git \
  mysql-client \
+ netcat \
  && rm -rf /var/lib/apt/lists/*
 
 # install composer
@@ -26,6 +27,9 @@ RUN composer create-project acquia/lightning-project:dev-headless --no-interacti
 RUN composer require drush/drush
 
 COPY ./000-default.conf /etc/apache2/sites-available
+
+# copy runtime scripts
+COPY ./scripts/container /opt/scripts
 
 # default settings
 COPY default.settings.php /tmp
