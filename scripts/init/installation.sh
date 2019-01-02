@@ -43,5 +43,7 @@ if [ "$1" == "--startd" ]; then
      sudo chmod 444 webroot/docroot/sites/default/settings.php
 
      docker-compose exec headless-lightning chown -R www-data:www-data /var/www/html
+
+     docker-compose exec headless-lightning ./vendor/bin/drush cr
   fi
 fi
