@@ -25,6 +25,7 @@ RUN rm -rf /var/www/html
 RUN composer create-project acquia/lightning-project:dev-headless --no-interaction --stability dev .
 
 RUN composer require drush/drush
+RUN composer require vlucas/phpdotenv
 
 COPY ./000-default.conf /etc/apache2/sites-available
 
