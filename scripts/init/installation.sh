@@ -7,8 +7,8 @@ echo "removing previously existing webroot and database directory"
 sudo chown `whoami`:`whoami` -R ./
 sudo rm -rf ./webroot ./database && mkdir ./webroot
 
-echo "copying files over..."
-docker run --rm dhl-experimental tar -cC /var/www/html . | tar -xC ./webroot
+echo "building fresh dhl-experimental && copying files over..."
+docker build -t dhl-experimental . && docker run --rm dhl-experimental tar -cC /var/www/html . | tar -xC ./webroot
 echo "file transfer completed!"
 
 if [ "$1" == "--start" ]; then
