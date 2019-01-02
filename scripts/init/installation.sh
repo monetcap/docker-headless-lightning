@@ -30,5 +30,7 @@ if [ "$1" == "--startd" ]; then
      --site-mail="$SITE_MAIL" \
      --site-name="$SITE_NAME" \
      --yes
+
+     docker-compose exec headless-lightning chown -R www-data:www-data /var/www/html
   fi
 fi

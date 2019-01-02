@@ -7,9 +7,6 @@ services:
 
     volumes:
       - ./webroot:/var/www/html
-    env_file:
-      - ./mysql.env
-      - ./drupal.env
 
     ports:
       - "80:80"
