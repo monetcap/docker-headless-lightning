@@ -1,0 +1,5 @@
+*.sql
+
+# docker bind mounted volumes
+database
+webroot

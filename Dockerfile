@@ -25,12 +25,12 @@ RUN composer create-project acquia/lightning-project:dev-headless --no-interacti
 
 RUN composer require drush/drush
 
-RUN mv README.md HEADLESS-LIGHTNING.md
-
 COPY ./000-default.conf /etc/apache2/sites-available
 
 # default settings
-RUN echo '$config_directories[CONFIG_SYNC_DIRECTORY] = "../config";' >> docroot/sites/default/default.settings.php
+COPY default.settings.php /tmp
+RUN cat /tmp/default.settings.php >> docroot/sites/default/default.settings.php
+RUN rm -rf /tmp/default.settings.php
 
 COPY docker-entrypoint.sh /bin
 RUN chmod +x /bin/docker-entrypoint.sh

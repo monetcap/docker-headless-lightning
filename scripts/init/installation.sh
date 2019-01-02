@@ -1,8 +1,8 @@
 #!/bin/bash
-echo "removing previously existing webroot directory"
-rm -rf ./webroot && mkdir ./webroot
+docker-compose down
 
-docker build -t dhl-experimental .
+echo "removing previously existing webroot directory"
+rm -rf ./webroot ./database && mkdir ./webroot
 
 echo "copying files over..."
 docker run --rm dhl-experimental tar -cC /var/www/html . | tar -xC ./webroot
