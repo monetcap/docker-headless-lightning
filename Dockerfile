@@ -34,9 +34,10 @@ COPY ./scripts/container/wait-until-mariadb-init.sh /opt/scripts
 RUN chmod +x -R /opt/scripts
 
 # default settings
-COPY default.settings.php /tmp
-RUN cat /tmp/default.settings.php >> docroot/sites/default/default.settings.php
-RUN rm -rf /tmp/default.settings.php
+RUN echo '$config_directories[CONFIG_SYNC_DIRECTORY] = "../config";' >> docroot/sites/default/default.settings.php
+
+# runtime install settings
+COPY install.settings.php /tmp
 
 COPY docker-entrypoint.sh /bin
 RUN chmod +x /bin/docker-entrypoint.sh
