@@ -7,8 +7,8 @@ echo "removing previously existing webroot and database directory"
 sudo chown `whoami`:`whoami` -R ./
 sudo rm -rf ./webroot ./database && mkdir ./webroot
 
-echo "copying files over..."
-docker run --rm dhl-experimental tar -cC /var/www/html . | tar -xC ./webroot
+echo "building fresh dhl-experimental && copying files over..."
+docker build -t dhl-experimental . && docker run --rm dhl-experimental tar -cC /var/www/html . | tar -xC ./webroot
 echo "file transfer completed!"
 
 if [ "$1" == "--start" ]; then
@@ -34,9 +34,15 @@ if [ "$1" == "--startd" ]; then
      --yes
 
      sudo chmod 777 webroot/docroot/sites/default/settings.php
-     cat install.settings.php >> webroot/docroot/sites/default/settings.php
+     sudo sed -i -e "s/^\s*'database' => .*,/    'database' => getenv('MYSQL_DATABASE'),/g" webroot/docroot/sites/default/settings.php
+     sudo sed -i -e "s/^\s*'username' => .*,/    'username' => getenv('MYSQL_USER'),/g" webroot/docroot/sites/default/settings.php
+     sudo sed -i -e "s/^\s*'password' => .*,/    'password' => getenv('MYSQL_PASSWORD'),/g" webroot/docroot/sites/default/settings.php
+     sudo sed -i -e "s/^\s*'host' => .*,/    'host' => getenv('MYSQL_HOST'),/g" webroot/docroot/sites/default/settings.php
+     sudo sed -i -e "s/^\s*'port' => .*,/    'port' => getenv('MYSQL_PORT'),/g" webroot/docroot/sites/default/settings.php
      sudo chmod 444 webroot/docroot/sites/default/settings.php
 
      docker-compose exec headless-lightning chown -R www-data:www-data /var/www/html
+
+     docker-compose exec headless-lightning ./vendor/bin/drush cr
   fi
 fi

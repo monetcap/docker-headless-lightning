@@ -25,6 +25,7 @@ RUN rm -rf /var/www/html
 RUN composer create-project acquia/lightning-project:dev-headless --no-interaction --stability dev .
 
 RUN composer require drush/drush
+RUN composer require vlucas/phpdotenv
 
 COPY ./000-default.conf /etc/apache2/sites-available
 
@@ -34,10 +35,8 @@ COPY ./scripts/container/wait-until-mariadb-init.sh /opt/scripts
 RUN chmod +x -R /opt/scripts
 
 # default settings
-RUN echo '$config_directories[CONFIG_SYNC_DIRECTORY] = "../config";' >> docroot/sites/default/default.settings.php
-
-# runtime install settings
-COPY install.settings.php /tmp
+COPY default.settings.php /tmp
+RUN cat /tmp/default.settings.php >> docroot/sites/default/default.settings.php
 
 COPY docker-entrypoint.sh /bin
 RUN chmod +x /bin/docker-entrypoint.sh

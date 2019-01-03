@@ -7,6 +7,7 @@ services:
 
     volumes:
       - ./webroot:/var/www/html
+      - ./mysql.env:/environment/mysql.env
 
     ports:
       - "80:80"
