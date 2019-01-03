@@ -1,0 +1,14 @@
+uuid: 6500d529-8f8a-4286-8355-80c6b2e287a0
+name: prod-backend.monetcap.com
+mail: admin@prod-backend.monetcap.com
+slogan: ''
+page:
+  403: /user/login
+  404: ''
+  front: /frontpage
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
+_core:
+  default_config_hash: yXadRE77Va-G6dxhd2kPYapAvbnSvTF6hO4oXiOEynI

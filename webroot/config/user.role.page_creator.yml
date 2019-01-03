@@ -1,0 +1,25 @@
+uuid: 2fbf5321-a7f9-4c9b-9e1e-25e231e6a80f
+langcode: en
+status: true
+dependencies: {  }
+id: page_creator
+label: 'Basic page creator'
+weight: 3
+is_admin: false
+permissions:
+  - 'access contextual links'
+  - 'access image_browser entity browser pages'
+  - 'access in-place editing'
+  - 'access media_browser entity browser pages'
+  - 'access toolbar'
+  - 'create page content'
+  - 'create url aliases'
+  - 'edit own page content'
+  - 'use editorial transition create_new_draft'
+  - 'use editorial transition review'
+  - 'use moderation sidebar'
+  - 'use text format rich_text'
+  - 'view any unpublished content'
+  - 'view latest version'
+  - 'view own unpublished content'
+  - 'view page revisions'

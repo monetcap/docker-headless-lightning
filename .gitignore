@@ -2,4 +2,8 @@
 
 # docker bind mounted volumes
 database
-webroot
+#webroot
+
+# environment files
+mysql.env
+drupal.env
