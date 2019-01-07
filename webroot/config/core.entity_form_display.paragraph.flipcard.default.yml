@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.flipcard.field_flipcard_attribution
     - field.field.paragraph.flipcard.field_flipcard_image
     - field.field.paragraph.flipcard.field_flipcard_text
     - image.style.thumbnail
@@ -15,6 +16,14 @@ targetEntityType: paragraph
 bundle: flipcard
 mode: default
 content:
+  field_flipcard_attribution:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   field_flipcard_image:
     weight: 0
     settings:

@@ -1,0 +1,21 @@
+uuid: 7f5cf882-94fb-4637-b0be-ec7a73c78b36
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_hero_footer_text
+field_name: field_hero_footer_text
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

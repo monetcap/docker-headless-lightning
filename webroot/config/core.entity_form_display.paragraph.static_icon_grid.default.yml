@@ -3,12 +3,27 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.static_icon_grid.field_icons
     - paragraphs.paragraphs_type.static_icon_grid
+  module:
+    - paragraphs
 id: paragraph.static_icon_grid.default
 targetEntityType: paragraph
 bundle: static_icon_grid
 mode: default
-content: {  }
+content:
+  field_icons:
+    type: entity_reference_paragraphs
+    weight: 0
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
 hidden:
   created: true
   status: true
