@@ -1,0 +1,23 @@
+uuid: f5870e2b-d6a2-4fc7-8de5-1543067d0f7b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_action_button_link
+    - paragraphs.paragraphs_type.action_button
+  module:
+    - link
+id: paragraph.action_button.field_action_button_link
+field_name: field_action_button_link
+entity_type: paragraph
+bundle: action_button
+label: 'Action button link'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

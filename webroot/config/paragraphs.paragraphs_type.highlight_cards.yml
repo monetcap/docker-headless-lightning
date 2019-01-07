@@ -1,0 +1,9 @@
+uuid: 0f966eeb-dadc-464c-93b1-423b40796577
+langcode: en
+status: true
+dependencies: {  }
+id: highlight_cards
+label: 'Highlight cards'
+icon_uuid: null
+description: 'Create a grid of highlight cards.'
+behavior_plugins: {  }

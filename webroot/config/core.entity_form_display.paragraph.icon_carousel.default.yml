@@ -1,0 +1,30 @@
+uuid: 4744779a-c661-4980-854a-c4611f02e4eb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.icon_carousel.field_icon_carousel_items
+    - paragraphs.paragraphs_type.icon_carousel
+  module:
+    - paragraphs
+id: paragraph.icon_carousel.default
+targetEntityType: paragraph
+bundle: icon_carousel
+mode: default
+content:
+  field_icon_carousel_items:
+    type: entity_reference_paragraphs
+    weight: 0
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

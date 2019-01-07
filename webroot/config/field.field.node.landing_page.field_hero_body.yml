@@ -1,0 +1,21 @@
+uuid: 0398103c-bfd6-45ab-9a8f-14743ac9a4b4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_hero_body
+    - node.type.landing_page
+  module:
+    - text
+id: node.landing_page.field_hero_body
+field_name: field_hero_body
+entity_type: node
+bundle: landing_page
+label: 'Hero body'
+description: 'Enter some descriptive text for display beneath the main heading in the hero unit.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

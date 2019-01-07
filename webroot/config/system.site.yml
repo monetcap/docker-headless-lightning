@@ -1,4 +1,4 @@
-uuid: 6500d529-8f8a-4286-8355-80c6b2e287a0
+uuid: 764381a7-e006-4d27-bd19-72a0e4fb2329
 name: prod-backend.monetcap.com
 mail: admin@prod-backend.monetcap.com
 slogan: ''
@@ -12,3 +12,4 @@ langcode: en
 default_langcode: en
 _core:
   default_config_hash: yXadRE77Va-G6dxhd2kPYapAvbnSvTF6hO4oXiOEynI
+mail_notification: ''

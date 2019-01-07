@@ -1,0 +1,9 @@
+uuid: 40f9d194-0a94-4b3a-b6c6-4c05d4bc0df6
+langcode: en
+status: true
+dependencies: {  }
+id: highlight_card
+label: 'Highlight card'
+icon_uuid: null
+description: 'Use this to display a card with a heading and body text.'
+behavior_plugins: {  }

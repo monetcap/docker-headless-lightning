@@ -1,0 +1,15 @@
+uuid: 4d545d03-1dad-4cd6-a087-f0de99a74332
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.static_icon_grid
+id: paragraph.static_icon_grid.default
+targetEntityType: paragraph
+bundle: static_icon_grid
+mode: default
+content: {  }
+hidden:
+  created: true
+  status: true
+  uid: true

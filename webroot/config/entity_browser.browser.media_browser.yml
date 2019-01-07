@@ -1,4 +1,4 @@
-uuid: ed203f25-454a-4089-8329-b80fb31b2b73
+uuid: 1995e587-579f-4af1-91f4-dc168c2d4183
 langcode: en
 status: true
 dependencies:
@@ -42,13 +42,13 @@ widgets:
     weight: -9
     label: Upload
     id: file_upload
-  6fac9599-ab52-4efc-93e7-067e4cc50269:
+  12fbeb29-8578-4307-a709-386454ccff05:
     settings:
       view: media
       view_display: entity_browser_1
       submit_text: Place
       auto_select: false
-    uuid: 6fac9599-ab52-4efc-93e7-067e4cc50269
+    uuid: 12fbeb29-8578-4307-a709-386454ccff05
     weight: -10
     label: Library
     id: view

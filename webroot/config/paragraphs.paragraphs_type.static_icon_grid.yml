@@ -1,0 +1,9 @@
+uuid: 37ea498b-b7a2-4294-8d18-71699b0e7c9c
+langcode: en
+status: true
+dependencies: {  }
+id: static_icon_grid
+label: 'Static icon grid'
+icon_uuid: null
+description: 'Like icon carousel, except items display in a grid that can keep growing instead of scrolling.'
+behavior_plugins: {  }

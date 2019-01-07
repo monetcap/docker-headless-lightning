@@ -1,0 +1,33 @@
+uuid: 94a1e4c3-83ea-487f-a8fd-a3a1facf93bd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.icon.field_icon_caption
+    - field.field.paragraph.icon.field_icon_image
+    - paragraphs.paragraphs_type.icon
+  module:
+    - image
+id: paragraph.icon.default
+targetEntityType: paragraph
+bundle: icon
+mode: default
+content:
+  field_icon_caption:
+    weight: 2
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_icon_image:
+    weight: 0
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+hidden: {  }

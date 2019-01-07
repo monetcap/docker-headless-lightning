@@ -1,0 +1,9 @@
+uuid: 4f7bc06b-ce0e-4361-932f-ee703836a1ec
+langcode: en
+status: true
+dependencies: {  }
+id: icon_carousel
+label: 'Icon carousel'
+icon_uuid: null
+description: 'Use this paragraph type to create a carousel of icons with headings beneath them.'
+behavior_plugins: {  }

@@ -1,0 +1,37 @@
+uuid: eca4dec0-86c8-4012-9292-7474941e013b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.flipcard.field_flipcard_image
+    - field.field.paragraph.flipcard.field_flipcard_text
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.flipcard
+  module:
+    - image
+    - text
+id: paragraph.flipcard.default
+targetEntityType: paragraph
+bundle: flipcard
+mode: default
+content:
+  field_flipcard_image:
+    weight: 0
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_flipcard_text:
+    weight: 1
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

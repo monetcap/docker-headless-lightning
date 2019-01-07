@@ -1,0 +1,21 @@
+uuid: 297c8f42-fcfe-405a-9d9e-b02911a33964
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_highlight_body
+    - paragraphs.paragraphs_type.highlight_card
+  module:
+    - text
+id: paragraph.highlight_card.field_highlight_body
+field_name: field_highlight_body
+entity_type: paragraph
+bundle: highlight_card
+label: 'Highlight body'
+description: 'Add body text for display inside your card.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

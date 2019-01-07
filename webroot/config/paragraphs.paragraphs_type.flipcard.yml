@@ -1,0 +1,9 @@
+uuid: 75a6c3da-2099-4206-be18-25bc262bdf68
+langcode: en
+status: true
+dependencies: {  }
+id: flipcard
+label: Flipcard
+icon_uuid: null
+description: 'Add an individual flipcard to a flipcard component.'
+behavior_plugins: {  }

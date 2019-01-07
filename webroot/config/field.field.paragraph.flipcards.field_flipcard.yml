@@ -1,0 +1,46 @@
+uuid: 87fafbea-ab98-4db2-b8c2-df73539e86d8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_flipcard
+    - paragraphs.paragraphs_type.flipcard
+    - paragraphs.paragraphs_type.flipcards
+  module:
+    - entity_reference_revisions
+id: paragraph.flipcards.field_flipcard
+field_name: field_flipcard
+entity_type: paragraph
+bundle: flipcards
+label: Flipcard
+description: 'Add an individual flipcard to display in the grid.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      flipcard: flipcard
+    target_bundles_drag_drop:
+      accordion:
+        weight: 7
+        enabled: false
+      accordion_item:
+        weight: 8
+        enabled: false
+      flipcard:
+        enabled: true
+        weight: 9
+      flipcards:
+        weight: 10
+        enabled: false
+      icon:
+        weight: 11
+        enabled: false
+      icon_carousel:
+        weight: 12
+        enabled: false
+field_type: entity_reference_revisions

@@ -1,0 +1,71 @@
+uuid: 84cdb437-6b8b-4014-b845-0d140f5a9188
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_section_components
+    - paragraphs.paragraphs_type.accordion
+    - paragraphs.paragraphs_type.action_button
+    - paragraphs.paragraphs_type.flipcards
+    - paragraphs.paragraphs_type.highlight_cards
+    - paragraphs.paragraphs_type.icon_carousel
+    - paragraphs.paragraphs_type.section
+    - paragraphs.paragraphs_type.static_icon_grid
+  module:
+    - entity_reference_revisions
+id: paragraph.section.field_section_components
+field_name: field_section_components
+entity_type: paragraph
+bundle: section
+label: 'Section components'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      accordion: accordion
+      static_icon_grid: static_icon_grid
+      flipcards: flipcards
+      icon_carousel: icon_carousel
+      action_button: action_button
+      highlight_cards: highlight_cards
+    target_bundles_drag_drop:
+      accordion:
+        enabled: true
+        weight: 8
+      accordion_item:
+        weight: 9
+        enabled: false
+      flipcard:
+        weight: 10
+        enabled: false
+      static_icon_grid:
+        enabled: true
+        weight: 10
+      flipcards:
+        enabled: true
+        weight: 11
+      icon:
+        weight: 12
+        enabled: false
+      icon_carousel:
+        enabled: true
+        weight: 13
+      action_button:
+        enabled: true
+        weight: 14
+      section:
+        weight: 14
+        enabled: false
+      highlight_card:
+        weight: 15
+        enabled: false
+      highlight_cards:
+        enabled: true
+        weight: 16
+field_type: entity_reference_revisions

@@ -1,0 +1,9 @@
+uuid: 1b82e6b7-e6cd-47b4-8b63-1211ea21876f
+langcode: en
+status: true
+dependencies: {  }
+id: accordion
+label: Accordion
+icon_uuid: null
+description: 'Add an accordion; typically for displaying FAQs or similarly structured content.'
+behavior_plugins: {  }

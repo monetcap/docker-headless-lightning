@@ -1,0 +1,9 @@
+uuid: 21a43e52-f927-4230-a41f-399c68c0eee8
+langcode: en
+status: true
+dependencies: {  }
+id: section
+label: Section
+icon_uuid: null
+description: 'Add a configurable section to a landing page.'
+behavior_plugins: {  }

@@ -1,0 +1,34 @@
+uuid: b99bb21d-1e10-4737-b66e-6966fba45ada
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_icon_carousel_items
+    - paragraphs.paragraphs_type.icon
+    - paragraphs.paragraphs_type.icon_carousel
+  module:
+    - entity_reference_revisions
+id: paragraph.icon_carousel.field_icon_carousel_items
+field_name: field_icon_carousel_items
+entity_type: paragraph
+bundle: icon_carousel
+label: 'Carousel items'
+description: 'Add 3 or more icons to create a carousel component.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      icon: icon
+    target_bundles_drag_drop:
+      icon:
+        enabled: true
+        weight: 3
+      icon_carousel:
+        weight: 4
+        enabled: false
+field_type: entity_reference_revisions

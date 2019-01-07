@@ -1,0 +1,26 @@
+uuid: 766e389e-64dd-4be0-94ee-432e6a5063b1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.action_button.field_action_button_link
+    - paragraphs.paragraphs_type.action_button
+  module:
+    - link
+id: paragraph.action_button.default
+targetEntityType: paragraph
+bundle: action_button
+mode: default
+content:
+  field_action_button_link:
+    weight: 0
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

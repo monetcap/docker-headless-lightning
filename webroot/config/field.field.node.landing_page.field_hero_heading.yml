@@ -1,0 +1,19 @@
+uuid: 0bcc6659-5f0f-4b2a-bfc9-2830d2711234
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_hero_heading
+    - node.type.landing_page
+id: node.landing_page.field_hero_heading
+field_name: field_hero_heading
+entity_type: node
+bundle: landing_page
+label: 'Hero heading'
+description: 'Enter the main heading for display in the hero unit above the fold.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

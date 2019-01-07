@@ -1,0 +1,24 @@
+uuid: 17a776cb-a288-4163-b3e4-6e8d35bccf01
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.flipcards.field_flipcard
+    - paragraphs.paragraphs_type.flipcards
+  module:
+    - entity_reference_revisions
+id: paragraph.flipcards.default
+targetEntityType: paragraph
+bundle: flipcards
+mode: default
+content:
+  field_flipcard:
+    type: entity_reference_revisions_entity_view
+    weight: 0
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+hidden: {  }

@@ -1,0 +1,21 @@
+uuid: 531a39aa-bd74-4fa2-9730-1cd5eb9d15f0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_highlight_heading
+    - paragraphs.paragraphs_type.highlight_card
+  module:
+    - text
+id: paragraph.highlight_card.field_highlight_heading
+field_name: field_highlight_heading
+entity_type: paragraph
+bundle: highlight_card
+label: 'Highlight heading'
+description: 'Add a highlight heading to display on your card.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

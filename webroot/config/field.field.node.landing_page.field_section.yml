@@ -1,0 +1,49 @@
+uuid: 3ad858ff-4203-4bcf-81a2-b03d8093f282
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_section
+    - node.type.landing_page
+    - paragraphs.paragraphs_type.section
+  module:
+    - entity_reference_revisions
+id: node.landing_page.field_section
+field_name: field_section
+entity_type: node
+bundle: landing_page
+label: Sections
+description: 'Add sections to this landing page.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      section: section
+    target_bundles_drag_drop:
+      accordion:
+        weight: 7
+        enabled: false
+      accordion_item:
+        weight: 8
+        enabled: false
+      flipcard:
+        weight: 9
+        enabled: false
+      flipcards:
+        weight: 10
+        enabled: false
+      icon:
+        weight: 11
+        enabled: false
+      icon_carousel:
+        weight: 12
+        enabled: false
+      section:
+        enabled: true
+        weight: 14
+field_type: entity_reference_revisions

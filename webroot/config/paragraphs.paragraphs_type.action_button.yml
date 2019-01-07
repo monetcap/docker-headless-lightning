@@ -1,0 +1,9 @@
+uuid: 61ca68f2-c563-4c27-869f-bf9943d4cc1a
+langcode: en
+status: true
+dependencies: {  }
+id: action_button
+label: 'Action button'
+icon_uuid: null
+description: 'An individual paragraph for CTAs so that props and other params can be added later. Use this fieldset whenever you want to display a call-to-action button.'
+behavior_plugins: {  }

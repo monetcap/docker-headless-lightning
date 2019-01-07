@@ -1,0 +1,9 @@
+uuid: 481c848a-283f-48e5-aadf-826b4eb0b26b
+langcode: en
+status: true
+dependencies: {  }
+id: accordion_item
+label: 'Accordion item'
+icon_uuid: null
+description: 'Add accordion items, like FAQ questions.'
+behavior_plugins: {  }

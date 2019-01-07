@@ -1,0 +1,19 @@
+uuid: 848ba96c-1cdb-4349-82c9-480d6ad133fc
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - text
+id: paragraph.field_flipcard_text
+field_name: field_flipcard_text
+entity_type: paragraph
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

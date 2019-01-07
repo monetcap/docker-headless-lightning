@@ -1,0 +1,30 @@
+uuid: 242773bd-05ee-4dee-ae8f-4c0143e7ebfb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.flipcards.field_flipcard
+    - paragraphs.paragraphs_type.flipcards
+  module:
+    - paragraphs
+id: paragraph.flipcards.default
+targetEntityType: paragraph
+bundle: flipcards
+mode: default
+content:
+  field_flipcard:
+    type: entity_reference_paragraphs
+    weight: 0
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

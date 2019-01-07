@@ -1,0 +1,21 @@
+uuid: 1344df50-5d6a-484d-9b4f-836677a55a0f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_flipcard_text
+    - paragraphs.paragraphs_type.flipcard
+  module:
+    - text
+id: paragraph.flipcard.field_flipcard_text
+field_name: field_flipcard_text
+entity_type: paragraph
+bundle: flipcard
+label: 'Flipcard text'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

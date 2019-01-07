@@ -1,0 +1,55 @@
+uuid: f9090db2-6f71-4c13-9a7a-55121790a97f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_icon_carousel_items
+    - paragraphs.paragraphs_type.icon
+    - paragraphs.paragraphs_type.static_icon_grid
+  module:
+    - entity_reference_revisions
+id: paragraph.static_icon_grid.field_icon_carousel_items
+field_name: field_icon_carousel_items
+entity_type: paragraph
+bundle: static_icon_grid
+label: 'Icon grid items'
+description: 'Add as many icons to the grid as you wish.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      icon: icon
+    target_bundles_drag_drop:
+      accordion:
+        weight: 10
+        enabled: false
+      accordion_item:
+        weight: 11
+        enabled: false
+      flipcard:
+        weight: 12
+        enabled: false
+      flipcards:
+        weight: 13
+        enabled: false
+      highlight_card:
+        weight: 14
+        enabled: false
+      icon:
+        enabled: true
+        weight: 15
+      icon_carousel:
+        weight: 16
+        enabled: false
+      section:
+        weight: 17
+        enabled: false
+      static_icon_grid:
+        weight: 18
+        enabled: false
+field_type: entity_reference_revisions

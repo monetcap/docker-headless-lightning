@@ -1,0 +1,58 @@
+uuid: 77162790-8c5a-48b0-b28f-476e357e386e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_highlight_card
+    - paragraphs.paragraphs_type.highlight_card
+    - paragraphs.paragraphs_type.highlight_cards
+  module:
+    - entity_reference_revisions
+id: paragraph.highlight_cards.field_highlight_card
+field_name: field_highlight_card
+entity_type: paragraph
+bundle: highlight_cards
+label: 'Highlight card'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      highlight_card: highlight_card
+    target_bundles_drag_drop:
+      accordion:
+        weight: 11
+        enabled: false
+      accordion_item:
+        weight: 12
+        enabled: false
+      flipcard:
+        weight: 13
+        enabled: false
+      flipcards:
+        weight: 14
+        enabled: false
+      highlight_card:
+        enabled: true
+        weight: 15
+      highlight_cards:
+        weight: 16
+        enabled: false
+      icon:
+        weight: 17
+        enabled: false
+      icon_carousel:
+        weight: 18
+        enabled: false
+      section:
+        weight: 19
+        enabled: false
+      static_icon_grid:
+        weight: 20
+        enabled: false
+field_type: entity_reference_revisions

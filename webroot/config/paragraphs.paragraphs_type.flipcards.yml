@@ -1,0 +1,9 @@
+uuid: a91874ad-e8a8-4305-827d-89d08f341fd9
+langcode: en
+status: true
+dependencies: {  }
+id: flipcards
+label: Flipcards
+icon_uuid: null
+description: 'Display an image and then reveal text in an overlay on hover or click.'
+behavior_plugins: {  }

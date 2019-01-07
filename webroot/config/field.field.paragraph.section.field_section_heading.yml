@@ -1,0 +1,19 @@
+uuid: c8773dbe-3724-44df-bf8e-6fbc57aec8dc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_section_heading
+    - paragraphs.paragraphs_type.section
+id: paragraph.section.field_section_heading
+field_name: field_section_heading
+entity_type: paragraph
+bundle: section
+label: 'Section heading'
+description: 'Add a heading or display title for your section.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
