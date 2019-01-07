@@ -40,4 +40,7 @@ RUN cat /tmp/default.settings.php >> docroot/sites/default/default.settings.php
 
 COPY docker-entrypoint.sh /bin
 RUN chmod +x /bin/docker-entrypoint.sh
+
+ENV PATH "/var/www/html/vendor/bin:$PATH"
+
 ENTRYPOINT [ "docker-entrypoint.sh" ]
