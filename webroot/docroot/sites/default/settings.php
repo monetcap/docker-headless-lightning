@@ -280,7 +280,7 @@ $config_directories = [];
  *   $settings['hash_salt'] = file_get_contents('/home/example/salt.txt');
  * @endcode
  */
-$settings['hash_salt'] = 'nAQUb0X8fAWKaz8LkmYemQQt6kj1R-EpWbJhRIHgmHUrkQm7tCofQqpN2UEX278fcRTpJJKa8A';
+$settings['hash_salt'] = 't6jqU_8F25nWMendBpaDNnSV-nSxOM36Bed22KpIY04xu1milgLgBMSilM556YCsFIi26n5ieQ';
 
 /**
  * Deployment identifier.
@@ -777,8 +777,8 @@ if (file_exists('/environment/mysql.env')) {
 $config_directories[CONFIG_SYNC_DIRECTORY] = "../config";
 
 $settings['trusted_host_patterns'] = array(
-    '^example\.com$',
-    '^.+\.example\.com$',
+    '^prod-backend.monetcap\.com$',
+    '^.+\.prod-backend.monetcap\.com$',
     '^127\.0\.0\.1$',
     '^localhost$',
 );
