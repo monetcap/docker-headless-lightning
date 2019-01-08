@@ -31,7 +31,7 @@ COPY ./000-default.conf /etc/apache2/sites-available
 
 # copy runtime scripts
 RUN mkdir -p /opt/scripts
-COPY ./scripts/container/wait-until-mariadb-init.sh /opt/scripts
+COPY ./scripts/wait-until-mariadb-init.sh /opt/scripts
 RUN chmod +x -R /opt/scripts
 
 # default settings
@@ -40,4 +40,7 @@ RUN cat /tmp/default.settings.php >> docroot/sites/default/default.settings.php
 
 COPY docker-entrypoint.sh /bin
 RUN chmod +x /bin/docker-entrypoint.sh
+
+ENV PATH "/var/www/html/vendor/bin:$PATH"
+
 ENTRYPOINT [ "docker-entrypoint.sh" ]
