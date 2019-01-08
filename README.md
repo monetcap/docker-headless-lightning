@@ -4,7 +4,7 @@
 `git clone git@github.com:vermilion-tech/docker-headless-lightning.git`
 
 ### Initial Installation
-Before you proceed, please read the `configuration` section of this `README`
+Before you proceed, please read the `Required Docker Configuration` section of this `README`
 
 If you don't already have a `docker-headless-lightning` installation, you can initialize one using
 `./scripts/main.sh --install`
@@ -12,7 +12,7 @@ If you don't already have a `docker-headless-lightning` installation, you can in
 After this you may want to comment out the `webroot` entry in `.gitignore` to include your webroot with the repository!
 
 ### Cloning the site to make a development environment or etc.
-Before you proceed, please read the `configuration` section of this `README`
+Before you proceed, please read the `Required Docker Configuration` section of this `README`
 
 You will need to have `mysql.env`, `drupal.env`, and `default.settings.php` all match the values configured on the production server or else you will encounter errors during installation/runtime
 
@@ -20,7 +20,15 @@ You will also need to have a database dump from the production server to initial
 
 Once you have configured and retrieved all of the necessary files, run `./scripts/main.sh --import-site /path/to/export/file`
 
-### Configuration
+### Importing/Exporting configuration
+To export configuration to be tracked inside the repository, you must execute
+`./scripts/main.sh --export-config`
+
+To import configuration, you must execute
+`./scripts/main.sh --import-config`
+
+
+### Required Docker Configuration
 
 ###### drupal.env
 Use this file to customize settings that Drupal will use on site initialization, using `./scripts/main.sh --install`
