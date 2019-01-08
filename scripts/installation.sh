@@ -19,10 +19,10 @@ source ./mysql.env
 source ./drupal.env
 
 echo "waiting until mariadb inits..."
-docker-compose exec headless-lightning /opt/scripts/wait-until-mariadb-init.sh
+docker-compose exec -T headless-lightning /opt/scripts/wait-until-mariadb-init.sh
 
 echo "installing site w/ drush..."
-docker-compose exec headless-lightning ./vendor/bin/drush site:install \
+docker-compose exec -T headless-lightning ./vendor/bin/drush site:install \
  --db-url="mysql://$MYSQL_USER:$MYSQL_PASSWORD@mariadb/$MYSQL_DATABASE" \
  --account-mail="$ACCOUNT_MAIL" \
  --site-mail="$SITE_MAIL" \
@@ -39,7 +39,7 @@ echo "initializing webroot/docroot/sites/default/settings.php"
  sudo chmod 444 webroot/docroot/sites/default/settings.php
 
 echo "ensuring directory permissions match www-data:www-data"
- docker-compose exec headless-lightning chown -R www-data:www-data /var/www/html
+ docker-compose exec -T headless-lightning chown -R www-data:www-data /var/www/html
 
 echo "rebuilding drupal cache"
- docker-compose exec headless-lightning ./vendor/bin/drush cr
+ docker-compose exec -T headless-lightning ./vendor/bin/drush cr
