@@ -71,6 +71,8 @@ case $key in
 
       docker-compose up --build -d
 
+      docker-compose exec -T headless-lightning composer install
+
       docker-compose exec -T headless-lightning /opt/scripts/wait-until-mariadb-init.sh
       docker-compose exec -T mariadb mysql -u ${MYSQL_USER} -p${MYSQL_PASSWORD} ${MYSQL_DATABASE} < "$IMPORT_PATH"
       docker-compose restart mariadb
