@@ -20,7 +20,7 @@ pipeline {
           sh 'ssh -o StrictHostKeyChecking=No -o UserKnownHostsFile=/dev/null -i $keyfile $DEPLOY_USER@$DEPLOY_HOST "cd $STAGING_DIR && git stash"'
           sh 'ssh -o StrictHostKeyChecking=No -o UserKnownHostsFile=/dev/null -i $keyfile $DEPLOY_USER@$DEPLOY_HOST "cd $STAGING_DIR && git pull"'
           sh 'ssh -o StrictHostKeyChecking=No -o UserKnownHostsFile=/dev/null -i $keyfile $DEPLOY_USER@$DEPLOY_HOST "cd $STAGING_DIR && git stash pop"'
-          sh 'ssh -o StrictHostKeyChecking=No -o UserKnownHostsFile=/dev/null -i $keyfile $DEPLOY_USER@$DEPLOY_HOST "docker-compose start"'
+          sh 'ssh -o StrictHostKeyChecking=No -o UserKnownHostsFile=/dev/null -i $keyfile $DEPLOY_USER@$DEPLOY_HOST "cd $STAGING_DIR && docker-compose start"'
           sh 'ssh -o StrictHostKeyChecking=No -o UserKnownHostsFile=/dev/null -i $keyfile $DEPLOY_USER@$DEPLOY_HOST "cd $STAGING_DIR && ./scripts/main.sh --import-config"'
         }
       }
