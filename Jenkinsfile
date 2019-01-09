@@ -12,7 +12,7 @@ pipeline {
     stage('Deploy Staging') {
       when { branch 'development' }
       steps {
-        withCredentials([sshUserPrivateKey(credentialsId: "89b383bf-8c04-4269-9df1-8a5ab97c579f", keyFileVariable: "keyfile")]) {
+        withCredentials([sshUserPrivateKey(credentialsId: "47e214c3-29c0-49b5-bb72-77d143188c35	", keyFileVariable: "keyfile")]) {
           sh 'ssh -o StrictHostKeyChecking=No -o UserKnownHostsFile=/dev/null -i $keyfile $DEPLOY_USER@$DEPLOY_HOST "cd $STAGING_DIR && docker-compose stop"'
           sh 'ssh -o StrictHostKeyChecking=No -o UserKnownHostsFile=/dev/null -i $keyfile $DEPLOY_USER@$DEPLOY_HOST "cd $STAGING_DIR && sudo rm -rf $STAGING_DIR/$FILES_DIR"'
           sh 'ssh -o StrictHostKeyChecking=No -o UserKnownHostsFile=/dev/null -i $keyfile $DEPLOY_USER@$DEPLOY_HOST "cd $STAGING_DIR && sudo cp -r $PROD_DIR/$FILES_DIR $STAGING_DIR/$FILES_DIR"'
