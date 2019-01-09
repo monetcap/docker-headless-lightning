@@ -777,8 +777,8 @@ if (file_exists('/environment/mysql.env')) {
 $config_directories[CONFIG_SYNC_DIRECTORY] = "../config";
 
 $settings['trusted_host_patterns'] = array(
-    '^staging-backend.monetcap\.com$',
-    '^.+\.staging-backend.monetcap\.com$',
+    '^prod-backend.monetcap\.com$',
+    '^.+\.prod-backend.monetcap\.com$',
     '^127\.0\.0\.1$',
     '^localhost$',
 );
