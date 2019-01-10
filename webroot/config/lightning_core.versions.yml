@@ -90,3 +90,5 @@ entity_reference_revisions: 1.6.0
 paragraphs: 1.5.0
 views_ui: 8.6.4
 rest: 8.6.4
+rest_export_nested: 1.0.0-alpha4
+views_field_view: 1.0.0-beta2

@@ -15,7 +15,9 @@
         "acquia/headless_lightning": "~1.4.0",
         "drush/drush": "^9.5",
         "vlucas/phpdotenv": "^2.5",
-        "drupal/paragraphs": "^1.5"
+        "drupal/paragraphs": "^1.5",
+        "drupal/rest_export_nested": "^1.0@alpha",
+        "drupal/views_field_view": "^1.0@beta"
     },
     "repositories": {
         "drupal": {

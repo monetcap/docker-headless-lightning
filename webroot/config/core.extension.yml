@@ -66,6 +66,7 @@ module:
   page_cache: 0
   path: 0
   rest: 0
+  rest_export_nested: 0
   schemata: 0
   schemata_json_schema: 0
   serialization: 0
@@ -83,6 +84,7 @@ module:
   user: 0
   video_embed_field: 0
   video_embed_media: 0
+  views_field_view: 0
   views_infinite_scroll: 0
   views_ui: 0
   workflows: 0
